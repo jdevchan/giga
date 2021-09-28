@@ -357,11 +357,7 @@ nav.show div.icon-close {
     border-radius: 0.25rem 0.25rem 0 0;
     text-align: center;
     background: var(--body-color);
-    transition: 0.3s;
-}
-
-.card:hover{
-    transform: translateY(-15px) !important;
+    
 }
 
 .card i {
@@ -627,6 +623,11 @@ footer .social a:hover {
     .card {
         padding-left: 3rem;
         padding-right: 3rem;
+        transition: 0.3s;
+    }
+
+    .card:hover{
+        transform: translateY(-15px) !important;
     }
 
     /* TESTIMONIALS */
