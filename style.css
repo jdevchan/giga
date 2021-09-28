@@ -153,17 +153,9 @@ body {
 
 
 /* ============== LOGO ==============*/
-.logo {
-    font: 700 1.31rem var(--title-font);
-    color: var(--title-color);
-}
-
-.logo span {
-    color: var(--base-color);
-}
-
-.logo-alt span {
-    color: var(--body-color);
+.logo img {
+    width: auto;
+    height: 3rem;
 }
 
 /* ============== NAVIGATION ==============*/
@@ -483,9 +475,10 @@ footer.section {
     padding: 4rem 0;
 }
 
-footer .logo {
+footer .logo img {
+    width: auto;
+    height: 10rem;
     display: inline-block;
-    margin-bottom: 1.5rem;
 }
 
 footer .brand p {
@@ -656,10 +649,6 @@ footer .social a:hover {
         grid-auto-flow: column;
         align-items: center;
         justify-content: space-between;
-    }
-
-    footer .logo {
-        font-size: 2.25rem;
     }
 }
 /* large devices: 1023 > */
