@@ -479,6 +479,7 @@ footer.section {
 footer .logo img {
     width: auto;
     height: 10rem;
+    display: inline-block;
 }
 
 footer .brand p {
@@ -626,7 +627,7 @@ footer .social a:hover {
     }
 
     .card:hover{
-        transform: translateY(-15px) !important;
+        transform: scale(1.08) !important;
     }
 
     /* TESTIMONIALS */
