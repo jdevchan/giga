@@ -60,6 +60,7 @@ scrollReveal.reveal(
   `#home .image, #home .text,
    #about .image, #about.text,
    #services .header, #services .card,
+   #coverage .header, #coverage .map,
    #testimonials .header, #testimonials .testimonials,
    #contact .text, #contact .links,
    footer .brand, footer .social
