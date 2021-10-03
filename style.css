@@ -35,7 +35,7 @@ img {
 
     /* fonts */
     --title-font-size: 1.875rem;
-    --subtitle-font-sieze: 1rem;
+    --subtitle-font-size: 1rem;
 
     --title-font: "Poppins", sans-serif;
     --body-font: "DM Sans", sans-serif;
@@ -148,7 +148,7 @@ body {
 }
 
 .section .subtitle {
-    font-size: var(--subtitle-font-sieze);
+    font-size: var(--subtitle-font-size);
 }
 
 
@@ -210,6 +210,18 @@ nav .menu ul {
     display: none;
 }
 
+nav .icon-profile {
+    display: flex;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--base-color);
+}
+
+nav .login{
+    visibility:hidden ;
+    color: var(--base-color);
+}
+
 /* ============== MOSTRAR MENU ==============*/
 nav.show .menu{
     opacity: 1;
@@ -235,6 +247,19 @@ nav.show ul.grid {
     gap: 3rem;
 }
 
+nav.show .title {
+    font-size: 1.562rem;
+}
+
+
+nav.show .icon-profile{
+    visibility: hidden;
+}
+nav.show .login {
+    visibility: visible;
+}
+
+
 /* toggle menu */
 .toggle {
     color: var(--base-color);
@@ -258,9 +283,8 @@ nav.show div.icon-close {
     top: 1.5rem;
 }
 
-#header nav .menu .icon-profile {
-    font-size: 1.5rem;
-    color: var(--base-color);
+nav.show .icon-profile {
+    visibility: hidden;
 }
 
 
@@ -677,7 +701,7 @@ footer .social a:hover {
 @media (min-width: 992px) {
     :root {
         --title-font-size: 2.25rem;
-        --subtitle-font-sieze: 1.125rem;
+        --subtitle-font-size: 1.125rem;
     }
 
 
