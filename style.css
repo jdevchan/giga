@@ -57,7 +57,7 @@ body {
 #particles-js{
     width: 100vw;
     height: 100vh;
-    z-index: -1000;
+    z-index: -100;
     position: fixed;
 }
 
@@ -566,6 +566,7 @@ footer .social a:hover {
 
     transition: 0.3s;
     transform: translateY(100%);
+    z-index: 1;
 }
 
 .back-to-top.show {
