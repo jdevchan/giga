@@ -258,6 +258,11 @@ nav.show div.icon-close {
     top: 1.5rem;
 }
 
+#header nav .menu .icon-profile {
+    font-size: 1.5rem;
+    color: var(--base-color);
+}
+
 
 /* ============== HOME ==============*/
 #home {
