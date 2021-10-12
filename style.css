@@ -218,7 +218,8 @@ nav .icon-profile {
 }
 
 nav .login{
-    visibility:hidden ;
+    visibility: hidden;
+    display: none;
     color: var(--base-color);
 }
 
@@ -257,6 +258,7 @@ nav.show .icon-profile{
 }
 nav.show .login {
     visibility: visible;
+    display: inline-block;
 }
 
 
