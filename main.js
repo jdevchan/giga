@@ -2,7 +2,7 @@ const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
 for (const element of toggle) {
-  element.addEventListener('click', function() {
+  element.addEventListener('click', function () {
     nav.classList.toggle('show')
   })
 }
@@ -11,19 +11,18 @@ for (const element of toggle) {
 const links = document.querySelectorAll('nav ul li a')
 
 for (const link of links) {
-  link.addEventListener('click', function() {
+  link.addEventListener('click', function () {
     nav.classList.remove('show')
   })
 }
 
 // MUDAR HEADER QUANDO DER SCROLL
 
-
 function changeHeaderWenScroll() {
   const header = document.querySelector('#header')
   const navHeight = header.offsetHeight
 
-  if (window.scrollY >= navHeight){
+  if (window.scrollY >= navHeight) {
     // SCROLL É MAIOR QUE A ALTURA DO HEADER
     header.classList.add('scroll')
   } else {
@@ -43,7 +42,7 @@ const swiper = new Swiper('.swiper', {
   breakpoints: {
     767: {
       slidesPerView: 2,
-      setWrapperSize: true,
+      setWrapperSize: true
     }
   }
 })
@@ -64,50 +63,60 @@ scrollReveal.reveal(
    #testimonials .header, #testimonials .testimonials,
    #contact .text, #contact .links,
    footer .brand, footer .social
-  `, {interval: 100})
+  `,
+  { interval: 100 }
+)
 
-  // BACK TO TOP
-  function backToTop() {
-    const backToTopButton = document.querySelector('.back-to-top')
+// BACK TO TOP
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
 
-    if(window.scrollY >= 560) {
-      backToTopButton.classList.add('show')
-    }else {
-      backToTopButton.classList.remove('show')
-    }
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
   }
+}
 
-  // MENU ATIVO CONFORME SEÇÃO VISÍVEL NA PÁGINA
-  const sections = document.querySelectorAll('main section[id]')
-  function activateMenuAtCurrentSection() {
+// MENU ATIVO CONFORME SEÇÃO VISÍVEL NA PÁGINA
+const sections = document.querySelectorAll('main section[id]')
+function activateMenuAtCurrentSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
-    const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+  for (const section of sections) {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
 
-    for( const section of sections ) {
-      const sectionTop = section.offsetTop
-      const sectionHeight = section.offsetHeight
-      const sectionId = section.getAttribute('id')
+    const checkpointStart = checkpoint >= sectionTop
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
 
-      const checkpointStart = checkpoint >= sectionTop
-      const checkpointEnd = checkpoint <= sectionTop + sectionHeight
-
-      if(checkpointStart && checkpointEnd) {
-        document
-        .querySelector('nav ul li a[href*=' + sectionId +']')
+    if (checkpointStart && checkpointEnd) {
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
         .classList.add('active')
-      } else {
-        document
-        .querySelector('nav ul li a[href*=' + sectionId +']')
+    } else {
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
         .classList.remove('active')
-      }
     }
-
   }
+}
 
-  // WHEN SCROLL
-  window.addEventListener('scroll', function() {
-    changeHeaderWenScroll()
-    backToTop()
-    activateMenuAtCurrentSection()
-  })
+// WHEN SCROLL
+window.addEventListener('scroll', function () {
+  changeHeaderWenScroll()
+  backToTop()
+  activateMenuAtCurrentSection()
+})
 
+// ICON PROFILE MENU
+document.body.onresize = function () {
+  if (document.body.clientWidth < 1200) {
+    const user = document.getElementById('user')
+    user.textContent = "Central do Assinante"
+  } else {
+    user.classList.toggle('icon-profile')
+    user.textContent = ""
+  }
+}
