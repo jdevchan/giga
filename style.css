@@ -207,13 +207,6 @@ nav .menu ul {
   display: none;
 }
 
-nav .icon-profile {
-  display: flex;
-  text-align: center;
-  font-size: 1.5rem;
-  color: var(--base-color);
-}
-
 /* ============== MOSTRAR MENU ==============*/
 nav.show .menu {
   opacity: 1;
@@ -266,9 +259,6 @@ nav.show div.icon-close {
   top: 1.5rem;
 }
 
-nav.show .icon-profile {
-  visibility: hidden;
-}
 
 /* ============== HOME ==============*/
 #home {

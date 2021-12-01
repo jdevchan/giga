@@ -16,6 +16,22 @@ for (const link of links) {
   })
 }
 
+// ICON PROFILE MENU
+window.onresize = function () {
+  const windowWidth =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth
+  const user = document.getElementById('user')
+  if (windowWidth < 1200) {
+    user.textContent = 'Central do Assinante'
+    user.classList.remove('icon-profile')
+  } else {
+    user.textContent = ''
+    user.classList.add('icon-profile')
+  }
+}
+
 // MUDAR HEADER QUANDO DER SCROLL
 
 function changeHeaderWenScroll() {
@@ -109,14 +125,3 @@ window.addEventListener('scroll', function () {
   backToTop()
   activateMenuAtCurrentSection()
 })
-
-// ICON PROFILE MENU
-document.body.onresize = function () {
-  if (document.body.clientWidth < 1200) {
-    const user = document.getElementById('user')
-    user.textContent = "Central do Assinante"
-  } else {
-    user.classList.toggle('icon-profile')
-    user.textContent = ""
-  }
-}
