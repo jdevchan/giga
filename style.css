@@ -207,6 +207,19 @@ nav .menu ul {
   display: none;
 }
 
+nav .icon-profile {
+  display: flex;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--base-color);
+}
+
+nav .login {
+  visibility: hidden;
+  display: none;
+  color: var(--base-color);
+}
+
 /* ============== MOSTRAR MENU ==============*/
 nav.show .menu {
   opacity: 1;
@@ -236,6 +249,14 @@ nav.show .title {
   font-size: 1.562rem;
 }
 
+nav.show .icon-profile {
+  visibility: hidden;
+}
+nav.show .login {
+  visibility: visible;
+  display: inline-block;
+}
+
 /* toggle menu */
 .toggle {
   color: var(--base-color);
@@ -259,6 +280,9 @@ nav.show div.icon-close {
   top: 1.5rem;
 }
 
+nav.show .icon-profile {
+  visibility: hidden;
+}
 
 /* ============== HOME ==============*/
 #home {
@@ -546,7 +570,7 @@ footer .social a:hover {
 
 /* ============== MEDIA QUERIES ==============*/
 /* extra large devices: 1200 > */
-@media (min-width: 1200px) {
+@media (min-width: 720px) {
   /* LAYOUT */
   main {
     margin-top: var(--header-height);
