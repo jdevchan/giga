@@ -310,6 +310,8 @@ nav.show .icon-profile {
 #home .image video {
   position: relative;
   right: 0;
+  width: 360px;
+  height: auto;
 }
 
 #home .image video,
@@ -634,6 +636,11 @@ footer .social a:hover {
 
   #home .image {
     order: 1;
+  }
+
+  #home .image video {
+    width: 560px;
+    height: auto;
   }
 
   #home .text {
