@@ -245,6 +245,10 @@ nav.show ul.grid {
   gap: 3rem;
 }
 
+nav.show ul li a {
+  top: 2rem;
+}
+
 nav.show .title {
   font-size: 1.562rem;
 }
@@ -307,14 +311,20 @@ nav.show .icon-profile {
   left: 16.8%;
 }
 
-#home .image video {
+#home .image .video {
   position: relative;
+  width: 100%;
   right: 0;
-  width: 360px;
-  height: auto;
 }
 
-#home .image video,
+#home .image iframe {
+  position: relative;
+  border: none;
+  width: 100%;
+  height: calc(0.5625 * 100vw);
+}
+
+#home .image iframe,
 #home .image::before {
   border-radius: 0.25rem;
 }
@@ -638,9 +648,10 @@ footer .social a:hover {
     order: 1;
   }
 
-  #home .image video {
+  #home .image .video iframe {
     width: 560px;
-    height: auto;
+    height: 315px;
+    border: none;
   }
 
   #home .text {
