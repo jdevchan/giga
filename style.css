@@ -311,12 +311,6 @@ nav.show .icon-profile {
   left: 16.8%;
 }
 
-#home .image .video {
-  position: relative;
-  width: 100%;
-  right: 0;
-}
-
 #home .image iframe {
   position: relative;
   border: none;
