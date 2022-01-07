@@ -103,7 +103,7 @@ body {
 
 /* ============== LAYOUT ==============*/
 .section header {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .section header strong {
@@ -138,7 +138,7 @@ body {
 }
 
 .section {
-  padding: calc(5rem + var(--header-height)) 0;
+  padding: calc(4rem + var(--header-height)) 0;
 }
 
 .section .title {
@@ -411,71 +411,20 @@ nav.show .icon-profile {
   height: 30rem;
 }
 
-/* ============== TESTIMONIALS ==============*/
-#testimonials {
-  background: rgb(255, 255, 255);
+/* ============== PLANS ==============*/
+#plans .card {
+  display: grid;
+  align-items: center;
+  border-radius: 4rem;
 }
-
-#testimonials .container {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-#testimonials header {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  margin-bottom: 0;
-}
-
-#testimonials blockquote {
-  padding: 2rem;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-  border-radius: 00.25rem;
-  background: var(--body-color);
-}
-
-#testimonials blockquote p {
-  position: relative;
-  text-indent: 1.875rem;
-  margin-bottom: 1.5rem;
-  color: var(--title-color);
-}
-
-#testimonials blockquote p span {
-  font: 700 2.5rem serif;
-  position: absolute;
-  top: -0.375rem;
-  left: -1.875rem;
+#plans .cards .card p {
+  font-size: 6rem;
+  font-weight: bold;
   color: var(--base-color);
 }
 
-#testimonials cite {
-  display: flex;
-  align-items: center;
-  font-style: normal;
-}
-
-#testimonials cite img {
-  width: 2rem;
-  height: 2rem;
-  object-fit: cover;
-  clip-path: circle();
-  margin-right: 0.5rem;
-}
-
-/* ============== SWIPER ==============*/
-.swiper-slide {
-  height: auto;
-  padding: 4rem 1rem;
-}
-
-.swiper-pagination-bullet {
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.swiper-pagination-bullet-active {
-  background: var(--base-color);
+#plans .cards .card span {
+  font-size: 1rem;
 }
 
 /* ============== CONTACT ==============*/
@@ -576,7 +525,7 @@ footer .social a:hover {
 
 /* ============== MEDIA QUERIES ==============*/
 /* extra large devices: 1200 > */
-@media (min-width: 720px) {
+@media (min-width: 1024px) {
   /* LAYOUT */
   main {
     margin-top: var(--header-height);
@@ -590,11 +539,10 @@ footer .social a:hover {
   }
 
   .section {
-    padding: 10rem 0;
+    padding: 9rem 0;
   }
 
-  .section header,
-  #testimonials header {
+  .section header {
     max-width: 32rem;
     text-align: center;
     margin-left: auto;
@@ -675,10 +623,9 @@ footer .social a:hover {
     transform: scale(1.08) !important;
   }
 
-  /* TESTIMONIALS */
-  #testimonials .container {
-    margin-left: auto;
-    margin-right: auto;
+  /* PLANS */
+  #plans .cards {
+    grid-template-columns: 1fr 1fr;
   }
 
   /* CONTACT */
