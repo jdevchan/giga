@@ -106,10 +106,6 @@ body {
   margin-bottom: 3rem;
 }
 
-.section header strong {
-  color: var(--base-color);
-}
-
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
