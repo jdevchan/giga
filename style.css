@@ -149,6 +149,7 @@ body {
 .logo img {
   width: auto;
   height: 4rem;
+  margin-top: .4rem;
 }
 
 /* ============== NAVIGATION ==============*/
