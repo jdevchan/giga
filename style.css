@@ -67,6 +67,10 @@ body {
   -webkit-font-smooothing: auto;
 }
 
+h3 .flat{
+  font: 2rem;
+}
+
 .button {
   background: var(--base-color);
   color: var(--text-color-light);
