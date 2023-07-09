@@ -413,6 +413,9 @@ nav.show .icon-profile {
 }
 
 /* ============== PLANS ==============*/
+#plans {
+  text-align: center;
+}
 #plans .card {
   display: grid;
   align-items: center;
@@ -423,9 +426,11 @@ nav.show .icon-profile {
   font-weight: bold;
   color: var(--base-color);
 }
-
 #plans .cards .card span {
   font-size: 1rem;
+}
+#plans .condiction{
+  margin-top: 5rem;
 }
 
 /* ============== CONTACT ==============*/
